@@ -19,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
 @RequiredArgsConstructor
 @Service
 public class PullDataServiceImpl implements PullDataService {
-    @Value("${external.api.url}")
+    @Value("https://rickandmortyapi.com/api/character")
     private String baseUrl;
     private final CharacterRepository characterRepository;
     private final CharacterMapper mapper;
