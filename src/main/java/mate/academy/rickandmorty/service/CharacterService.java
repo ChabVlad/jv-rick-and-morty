@@ -3,7 +3,7 @@ package mate.academy.rickandmorty.service;
 import java.util.List;
 import mate.academy.rickandmorty.dto.internal.CharacterDto;
 
-public interface RickAndMortyClient {
+public interface CharacterService {
     CharacterDto getRandomCharacter();
 
     List<CharacterDto> findByPartOfName(String partOfName);

@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import mate.academy.rickandmorty.dto.internal.CharacterDto;
-import mate.academy.rickandmorty.service.RickAndMortyClient;
+import mate.academy.rickandmorty.service.CharacterService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
         name = "Rick and Morty controller",
         description = "endpoints for getting characters")
 public class RickAndMortyController {
-    private final RickAndMortyClient client;
+    private final CharacterService client;
 
     @GetMapping("/random")
     @Operation(

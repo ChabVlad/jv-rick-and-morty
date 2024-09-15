@@ -13,13 +13,13 @@ import mate.academy.rickandmorty.model.CharacterRickAndMorty;
 import mate.academy.rickandmorty.repository.CharacterRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 @RequiredArgsConstructor
-@Service
-public class PullDataServiceImpl implements PullDataService {
-    @Value("https://rickandmortyapi.com/api/character")
+@Component
+public class CharacterClientImpl implements CharacterClient {
+    @Value("${rick-and-morty.url}")
     private String baseUrl;
     private final CharacterRepository characterRepository;
     private final CharacterMapper mapper;

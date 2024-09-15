@@ -1,5 +1,5 @@
 package mate.academy.rickandmorty.service;
 
-public interface PullDataService {
+public interface CharacterClient {
     void pullAllFromExternalApiToDb();
 }

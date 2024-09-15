@@ -18,7 +18,7 @@ public class CharacterRickAndMorty {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private Long externalId;
 
     @Column(nullable = false)

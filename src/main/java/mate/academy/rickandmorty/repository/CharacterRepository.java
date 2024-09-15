@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CharacterRepository extends JpaRepository<CharacterRickAndMorty, Long> {
-    public long count();
+    long count();
 
-    public List<CharacterRickAndMorty> findByNameContaining(String name);
+    List<CharacterRickAndMorty> findByNameContaining(String name);
 }
